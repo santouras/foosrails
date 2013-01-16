@@ -10,6 +10,8 @@ gem 'mysql2'
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'rb-fsevent'
+  gem 'growl'
 end
 
 
