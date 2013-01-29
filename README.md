@@ -1,3 +1,4 @@
-== Foosball app on rails
+Foosball app on rails
+=====================
 
 let's do it
