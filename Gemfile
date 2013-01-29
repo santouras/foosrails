@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.11'
 gem 'jquery-rails'
 gem 'mysql2'
+gem 'bcrypt-ruby'
 
 
 # gems used just for testing
