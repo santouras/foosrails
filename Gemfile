@@ -1,10 +1,18 @@
 source 'https://rubygems.org'
 
 # global gems
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 gem 'jquery-rails'
 gem 'mysql2'
+
+# make passwords saferish
 gem 'bcrypt-ruby'
+
+# foriegn key support in dbs
+gem 'schema_plus'
+
+# rails 4 strong params
+gem 'strong_parameters'
 
 
 # gems used just for testing
@@ -12,7 +20,6 @@ group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'rb-fsevent'
-  gem 'growl'
 end
 
 
