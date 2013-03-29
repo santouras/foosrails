@@ -103,7 +103,6 @@ GEM
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     rake (10.0.4)
-    rb-fsevent (0.9.3)
     rdoc (3.12.2)
       json (~> 1.4)
     rubyzip (0.9.9)
@@ -157,7 +156,6 @@ DEPENDENCIES
   pry
   pry-rails
   rails (= 3.2.13)
-  rb-fsevent
   sass-rails (~> 3.2.3)
   schema_plus
   strong_parameters

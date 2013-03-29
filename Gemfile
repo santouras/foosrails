@@ -19,9 +19,7 @@ gem 'strong_parameters'
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'rb-fsevent'
 end
-
 
 group :development do
 
