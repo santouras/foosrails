@@ -29,6 +29,9 @@ group :development, :test do
   # love pry
   gem 'pry'
   gem 'pry-rails'
+
+  # rspec testing framework
+  gem 'rspec-rails'
 end
 
 # Gems used only for assets and not required
