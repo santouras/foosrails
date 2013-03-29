@@ -27,16 +27,10 @@ group :development do
 
 end
 
-
 group :development, :test do
   # love pry
   gem 'pry'
   gem 'pry-rails'
-
-  gem 'rspec-rails'
-  gem 'guard-rspec'
-  gem 'guard-spork'
-  gem 'spork'
 end
 
 # Gems used only for assets and not required
