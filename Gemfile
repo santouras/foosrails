@@ -34,9 +34,6 @@ group :development, :test do
   gem 'pry-rails'
 
   gem 'rspec-rails'
-  gem 'guard-rspec'
-  gem 'guard-spork'
-  gem 'spork'
 end
 
 # Gems used only for assets and not required
