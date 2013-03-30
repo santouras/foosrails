@@ -34,4 +34,45 @@ describe User do
   it { should respond_to(:remember_token) }
 
   it { should be_valid }
+
+  describe "with no name" do
+    before { @user.name = "" }
+    it { should_not be_valid }
+
+    before { @user.name = " "}
+    it { should_not be_valid }
+  end
+
+  describe "with name too long" do
+    before { @user.name = 't' * 500 }
+    it { should_not be_valid }
+  end
+
+  describe "with no email" do
+    before { @user.name = "" }
+    it { should_not be_valid }
+  end
+
+  describe "with an invalid email" do
+    it "should be invalid" do
+      addresses = %w[user@gfoo,com user_at_foo.com no.trailing@tld.
+                    foo@no_underscore.com no@tld+plus.com]
+      addresses.each do | invalid_address |
+        @user.email = invalid_address
+        @user.should_not be_valid
+      end
+    end
+  end
+
+  describe "with a valid email" do
+    it "should be valid" do
+      addresses = %w[user@domain.com user+filter@domain.com]
+
+      address.each do | valid_address |
+        @user.email = valid_address
+        @user.email should be_valid
+      end
+    end
+  end
+
 end
