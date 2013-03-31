@@ -70,9 +70,9 @@ describe User do
     it "should be valid" do
       addresses = %w[user@domain.com user+filter@domain.com]
 
-      address.each do | valid_address |
+      addresses.each do | valid_address |
         @user.email = valid_address
-        @user.email should be_valid
+        @user.should be_valid
       end
     end
   end
