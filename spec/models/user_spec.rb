@@ -20,6 +20,7 @@ describe User do
       name: "Example",
       email: "foo@bar.com",
       password: "foobar",
+      points: 500,
       password_confirmation: "foobar"
     );
   end
@@ -28,6 +29,7 @@ describe User do
 
   it { should respond_to(:name) }
   it { should respond_to(:email) }
+  it { should respond_to(:points) }
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
