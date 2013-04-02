@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # global gems
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'mysql2'
 
@@ -19,20 +19,18 @@ gem 'strong_parameters'
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'rb-fsevent'
 end
-
 
 group :development do
 
 end
-
 
 group :development, :test do
   # love pry
   gem 'pry'
   gem 'pry-rails'
 
+  # rspec testing framework
   gem 'rspec-rails'
 end
 
