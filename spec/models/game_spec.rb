@@ -15,12 +15,14 @@
 require 'spec_helper'
 
 describe Game do
-  let(:user) { FactoryGirl.create(:user) }
+  let(:user1) { FactoryGirl.create(:user) }
+  let(:user2) { FactoryGirl.create(:user) }
 
   before do
+
     @game = Game.new(
-      user1_id: user,
-      user2_id: user.dup,
+      user1_id: user1.id,
+      user2_id: user2.id,
       score1: 10,
       score2: 4
     );
@@ -34,5 +36,13 @@ describe Game do
   it { should respond_to(:score2) }
   it { should respond_to(:points) }
 
+  describe "with no user" do
+    before { @game.user1_id = nil }
+    it { should_not be_valid }
+  end
 
+  describe "with a bad score" do
+    before { @game.points = -4 }
+    it { should_not be_valid }
+  end
 end
