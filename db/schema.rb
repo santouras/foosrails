@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130129105836) do
+ActiveRecord::Schema.define(:version => 20130402212303) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20130129105836) do
     t.float    "points"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "weight"
     t.index ["user1_id"], :name => "index_games_on_user1_id"
     t.index ["user2_id"], :name => "index_games_on_user2_id"
     t.foreign_key ["user1_id"], "users", ["id"], :on_update => :restrict, :on_delete => :restrict, :name => "fk_games_user1_id"

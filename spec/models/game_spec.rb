@@ -24,7 +24,8 @@ describe Game do
       user1_id: user1.id,
       user2_id: user2.id,
       score1: 10,
-      score2: 4
+      score2: 4,
+      weight: 10
     );
   end
 
@@ -35,6 +36,7 @@ describe Game do
   it { should respond_to(:score1) }
   it { should respond_to(:score2) }
   it { should respond_to(:points) }
+  it { should respond_to(:weight) }
 
   describe "with no user" do
     before { @game.user1_id = nil }
