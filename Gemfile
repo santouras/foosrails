@@ -14,6 +14,11 @@ gem 'schema_plus'
 # rails 4 strong params
 gem 'strong_parameters'
 
+# set important things in environment variables, not config files
+gem 'dotenv-rails'
+
+# sensible templating
+gem 'haml-rails'
 
 # gems used just for testing
 group :test do
