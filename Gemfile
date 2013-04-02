@@ -17,6 +17,9 @@ gem 'strong_parameters'
 # set important things in environment variables, not config files
 gem 'dotenv-rails'
 
+# sensible templating
+gem 'haml-rails'
+
 # gems used just for testing
 group :test do
   gem 'capybara'
