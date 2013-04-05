@@ -1,5 +1,6 @@
 # Ratings Calculations
 
+Shamelessly stolen from [Wikipedia](http://en.wikipedia.org/wiki/World_Football_Elo_Ratings#Basic_calculation_principles)
 
 ## Overall Calculation
 
