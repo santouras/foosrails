@@ -37,7 +37,7 @@ describe User do
 
   it { should be_valid }
 
-  describe "with no name" do
+  context "with no name" do
     before { @user.name = "" }
     it { should_not be_valid }
 
@@ -45,17 +45,17 @@ describe User do
     it { should_not be_valid }
   end
 
-  describe "with name too long" do
+  context "with name too long" do
     before { @user.name = 't' * 500 }
     it { should_not be_valid }
   end
 
-  describe "with no email" do
+  context "with no email" do
     before { @user.name = "" }
     it { should_not be_valid }
   end
 
-  describe "with an invalid email" do
+  context "with an invalid email" do
     it "should be invalid" do
       addresses = %w[user@gfoo,com user_at_foo.com no.trailing@tld.
                     foo@no_underscore.com no@tld+plus.com]
@@ -66,7 +66,7 @@ describe User do
     end
   end
 
-  describe "with a valid email" do
+  context "with a valid email" do
     it "should be valid" do
       addresses = %w[user@domain.com user+filter@domain.com]
 

@@ -38,12 +38,12 @@ describe Game do
   it { should respond_to(:points) }
   it { should respond_to(:weight) }
 
-  describe "with no user" do
+  context "with no user" do
     before { @game.user1_id = nil }
     it { should_not be_valid }
   end
 
-  describe "with a bad score" do
+  context "with a bad score" do
     before { @game.points = -4 }
     it { should_not be_valid }
   end
