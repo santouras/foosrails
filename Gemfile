@@ -9,7 +9,7 @@ gem 'mysql2'
 gem 'bcrypt-ruby'
 
 # foriegn key support in dbs
-gem 'schema_plus'
+#gem 'schema_plus'
 
 # set important things in environment variables, not config files
 gem 'dotenv-rails'
