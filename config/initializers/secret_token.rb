@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Foosrails::Application.config.secret_token = 'f19e2ad9265111debbf5ece0ca1970f2bb1628795ee051e16e2787ac7e8ffe37ebd425a4a045603b712cc7875a2d06aa7f2b462642f689f4602cb93b186a5e39'
+Foosrails::Application.config.secret_token = ENV["SECRET_TOKEN"]
