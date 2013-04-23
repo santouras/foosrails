@@ -4,6 +4,10 @@ module GameHelper
 
   end
 
+  def K
+    self.weight
+  end
+
   def G
     case diff
     when 0, 1
