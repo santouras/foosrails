@@ -29,7 +29,18 @@ module GameHelper
     end
   end
 
+  def dr
+    user_diff
+  end
+
   private
+
+  def user_diff
+    @user_diff = self.user1.points - self.user2.points
+
+    @user_diff *= -1 if @user_diff < 0
+    @user_diff
+  end
 
   def score_diff
     @score_diff = self.score1 - self.score2
