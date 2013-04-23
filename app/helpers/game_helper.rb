@@ -9,18 +9,18 @@ module GameHelper
   end
 
   def G
-    case diff
+    case score_diff
     when 0, 1
       1
     when 2
       3 / 2.0
     else
-      (11 + diff ) / 8.0
+      (11 + score_diff ) / 8.0
     end
   end
 
   def W user
-    return 0.5 if diff == 0
+    return 0.5 if score_diff == 0
 
     if user == self.user1
       return self.score1 < self.score2 ? 0 : 1
@@ -31,10 +31,10 @@ module GameHelper
 
   private
 
-  def diff
-    @diff = self.score1 - self.score2
+  def score_diff
+    @score_diff = self.score1 - self.score2
 
-    @diff *= -1 if @diff < 0
-    @diff
+    @score_diff *= -1 if @score_diff < 0
+    @score_diff
   end
 end
