@@ -96,7 +96,35 @@ describe "GameHelper" do
     end
 
     context "We:" do
+      context "130 point gap" do
+        before(:each) do
+          game.user1.points = 630
+          game.user2.points = 500
+        end
 
+        it "player1" do
+          game.We(game.user1).should eq(0.679)
+        end
+
+        it "player2" do
+          game.We(game.user2).should eq(0.321)
+        end
+      end
+
+      context "20 point gap" do
+        before(:each) do
+          game.user1.points = 500
+          game.user2.points = 480
+        end
+
+        it "player1" do
+          game.We(game.user1).should eq(0.529)
+        end
+
+        it "player2" do
+          game.We(game.user2).should eq(0.471)
+        end
+      end
     end
   end
 
