@@ -73,7 +73,26 @@ describe "GameHelper" do
     end
 
     context "dr:" do
+      it "player1 higher" do
+        game.user1.points = 500
+        game.user2.points = 300
 
+        game.dr.should eq(200)
+      end
+
+      it "player2 higher" do
+        game.user1.points = 200
+        game.user2.points = 500
+
+        game.dr.should eq(300)
+      end
+
+      it "players level" do
+        game.user1.points = 500
+        game.user2.points = 500
+
+        game.dr.should eq(0)
+      end
     end
 
     context "We:" do
