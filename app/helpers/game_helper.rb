@@ -19,6 +19,16 @@ module GameHelper
     end
   end
 
+  def W user
+    return 0.5 if diff == 0
+
+    if user == self.user1
+      return self.score1 < self.score2 ? 0 : 1
+    else
+      return self.score1 > self.score2 ? 0 : 1
+    end
+  end
+
   private
 
   def diff
