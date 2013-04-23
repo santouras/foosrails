@@ -35,7 +35,7 @@ describe "GameHelper" do
 
     end
 
-    contect "W:" do
+    context "W:" do
       it "player1 win" do
         game.score1 = 10
         game.score2 = 9
