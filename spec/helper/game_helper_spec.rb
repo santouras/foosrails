@@ -35,6 +35,43 @@ describe "GameHelper" do
 
     end
 
+    contect "W:" do
+      it "player1 win" do
+        game.score1 = 10
+        game.score2 = 9
+
+        game.W(game.user1).should eq(1)
+      end
+
+      it "player2 win" do
+        game.score1 = 9
+        game.score2 = 10
+
+        game.W(game.user2).should eq(1)
+      end
+
+      it "player1 loss" do
+        game.score1 = 9
+        game.score2 = 10
+
+        game.W(game.user1).should eq(0)
+      end
+
+      it "player2 loss" do
+        game.score1 = 10
+        game.score2 = 9
+
+        game.W(game.user2).should eq(0)
+      end
+
+      it "draw" do
+        game.score1 = 10
+        game.score2 = 10
+
+        game.W(game.user1).should eq(0.5)
+      end
+    end
+
     context "dr:" do
 
     end
