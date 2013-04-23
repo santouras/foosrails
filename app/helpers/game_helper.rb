@@ -1,6 +1,6 @@
 module GameHelper
 
-  def calculate value
+  def calculate
 
   end
 
