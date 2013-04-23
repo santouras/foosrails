@@ -1,4 +1,3 @@
-
 require "spec_helper"
 
 describe "GameHelper" do
@@ -10,36 +9,28 @@ describe "GameHelper" do
         game.score1 = 10
         game.score2 = 10
 
-        game.calculate(:G)
-
-        game.G.should_be 1
+        game.G.should eq(1)
       end
 
       it "+1 to player1" do
         game.score1 = 10
         game.score2 = 9
 
-        game.calculate(:G)
-
-        game.G.should_be 1
+        game.G.should eq(1)
       end
 
       it "+1 to player2" do
         game.score1 = 9
         game.score2 = 10
 
-        game.calculate(:G)
-
-        game.G.should_be 1
+        game.G.should eq(1)
       end
 
       it "+2" do
         game.score1 = 10
         game.score2 = 8
 
-        game.calculate(:G)
-
-        game.G.should_be 1.5
+        game.G.should eq(1.5)
       end
 
     end
