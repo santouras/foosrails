@@ -57,28 +57,28 @@ describe "Game" do
         game.score1 = 10
         game.score2 = 10
 
-        game.G(game).should eq(1)
+        game.G.should eq(1)
       end
 
       it "+1 to player1" do
         game.score1 = 10
         game.score2 = 9
 
-        game.G(game).should eq(1)
+        game.G.should eq(1)
       end
 
       it "+1 to player2" do
         game.score1 = 9
         game.score2 = 10
 
-        game.G(game).should eq(1)
+        game.G.should eq(1)
       end
 
       it "+2" do
         game.score1 = 10
         game.score2 = 8
 
-        game.G(game).should eq(1.5)
+        game.G.should eq(1.5)
       end
 
     end
@@ -88,35 +88,35 @@ describe "Game" do
         game.score1 = 10
         game.score2 = 9
 
-        game.W(game, game.user1).should eq(1)
+        game.W(game.user1).should eq(1)
       end
 
       it "player2 win" do
         game.score1 = 9
         game.score2 = 10
 
-        game.W(game, game.user2).should eq(1)
+        game.W(game.user2).should eq(1)
       end
 
       it "player1 loss" do
         game.score1 = 9
         game.score2 = 10
 
-        game.W(game, game.user1).should eq(0)
+        game.W(game.user1).should eq(0)
       end
 
       it "player2 loss" do
         game.score1 = 10
         game.score2 = 9
 
-        game.W(game, game.user2).should eq(0)
+        game.W(game.user2).should eq(0)
       end
 
       it "draw" do
         game.score1 = 10
         game.score2 = 10
 
-        game.W(game, game.user1).should eq(0.5)
+        game.W(game.user1).should eq(0.5)
       end
     end
 
@@ -125,21 +125,21 @@ describe "Game" do
         game.user1.points = 500
         game.user2.points = 300
 
-        game.dr(game, game.user1).should eq(200)
+        game.dr(game.user1).should eq(200)
       end
 
       it "player2 higher" do
         game.user1.points = 200
         game.user2.points = 500
 
-        game.dr(game, game.user1).should eq(-300)
+        game.dr(game.user1).should eq(-300)
       end
 
       it "players level" do
         game.user1.points = 500
         game.user2.points = 500
 
-        game.dr(game, game.user1).should eq(0)
+        game.dr(game.user1).should eq(0)
       end
     end
 
@@ -151,11 +151,11 @@ describe "Game" do
         end
 
         it "player1" do
-          game.We(game, game.user1).should eq(0.679)
+          game.We(game.user1).should eq(0.679)
         end
 
         it "player2" do
-          game.We(game, game.user2).should eq(0.321)
+          game.We(game.user2).should eq(0.321)
         end
       end
 
@@ -166,11 +166,11 @@ describe "Game" do
         end
 
         it "player1" do
-          game.We(game, game.user1).should eq(0.529)
+          game.We(game.user1).should eq(0.529)
         end
 
         it "player2" do
-          game.We(game, game.user2).should eq(0.471)
+          game.We(game.user2).should eq(0.471)
         end
       end
     end
