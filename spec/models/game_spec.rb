@@ -21,8 +21,8 @@ describe Game do
   before do
 
     @game = Game.new(
-      user1_id: user1.id,
-      user2_id: user2.id,
+      user1: user1,
+      user2: user2,
       score1: 10,
       score2: 4,
       weight: 10
@@ -31,8 +31,8 @@ describe Game do
 
   subject { @game }
 
-  it { should respond_to(:user1_id) }
-  it { should respond_to(:user2_id) }
+  it { should respond_to(:user1) }
+  it { should respond_to(:user2) }
   it { should respond_to(:score1) }
   it { should respond_to(:score2) }
   it { should respond_to(:points) }
