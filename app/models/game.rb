@@ -43,6 +43,10 @@ class Game < ActiveRecord::Base
     (1 / ( 10 ** ( - self.dr(user) / 400) + 1)).round(3)
   end
 
+  def P(user)
+    (self.K * self.G  * ( self.W(user) - self.We(user) )).round(3)
+  end
+
   def score_diff
     @_score_diff ||= calculate_score_diff
   end
