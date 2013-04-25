@@ -48,7 +48,7 @@ class Game < ActiveRecord::Base
   end
 
   def user_diff(user)
-    @_user_diff ||= calculate_user_diff(user)
+    calculate_user_diff(user)
   end
 
   private
