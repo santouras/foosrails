@@ -177,8 +177,34 @@ describe "Game" do
   end
 
   describe "points calculations" do
-    context "example set 1" do
+    let(:teamA) { FactoryGirl.create(:user, points: 630) }
+    let(:teamB) { FactoryGirl.create(:user, points: 500) }
+    let(:teamC) { FactoryGirl.create(:user, points: 480) }
 
+    context "example set 1" do
+      before do
+        @game = Game.new \
+          user1: teamA,
+          user2: teamB,
+          weight: 20
+      end
+
+      context "Team A 3 : Team B 1" do
+        before do
+          @game.score1 = 3
+          @game.score2 = 1
+        end
+
+        it "We is worked out correctly" do
+          @game.We(teamA).should eq(0.679)
+          @game.We(teamB).should eq(0.321)
+        end
+
+        it "P is worked out correctly" do
+          @game.P(teamA).should eq(9.63)
+          @game.P(teamB).should eq(-9.63)
+        end
+      end
     end
 
     context "example set 2" do
