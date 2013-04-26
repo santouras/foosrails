@@ -205,9 +205,80 @@ describe "Game" do
           @game.P(teamB).should eq(-9.63)
         end
       end
+
+      context "Team A 1 : Team B 3" do
+        before do
+          @game.score1 = 1
+          @game.score2 = 3
+        end
+
+        it "P is worked out correctly" do
+          @game.P(teamA).should eq(-20.37)
+          @game.P(teamB).should eq(20.37)
+        end
+      end
+
+      context "Team A 2 : Team B 2" do
+        before do
+          @game.score1 = 2
+          @game.score2 = 2
+        end
+
+        it "P is worked out correctly" do
+          @game.P(teamA).should eq(-3.58)
+          @game.P(teamB).should eq(3.58)
+        end
+      end
     end
 
     context "example set 2" do
+      before do
+        @game = Game.new \
+          user1: teamB,
+          user2: teamC,
+          weight: 20
+      end
+
+      context "Team B 3 : Team C 1" do
+        before do
+          @game.score1 = 3
+          @game.score2 = 1
+        end
+
+        it "We is worked out correctly" do
+          @game.We(teamB).should eq(0.529)
+          @game.We(teamC).should eq(0.471)
+        end
+
+        it "P is worked out correctly" do
+          @game.P(teamB).should eq(14.13)
+          @game.P(teamC).should eq(-14.13)
+        end
+      end
+
+      context "Team B 1 : Team C 3" do
+        before do
+          @game.score1 = 1
+          @game.score2 = 3
+        end
+
+        it "P is worked out correctly" do
+          @game.P(teamB).should eq(-15.87)
+          @game.P(teamC).should eq(15.87)
+        end
+      end
+
+      context "Team B 2 : Team C 2" do
+        before do
+          @game.score1 = 2
+          @game.score2 = 2
+        end
+
+        it "P is worked out correctly" do
+          @game.P(teamB).should eq(-0.58)
+          @game.P(teamC).should eq(0.58)
+        end
+      end
 
     end
   end
