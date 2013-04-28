@@ -6,8 +6,14 @@ class Game < ActiveRecord::Base
   validates :user2_id, presence: true
   validates :points, :numericality => { :greater_than_or_equal_to => 0 }
 
-  def calculate
+  before_create :calculate
 
+  def calculate
+    @points = self.P(self.user1)
+
+    @points *= -1 if @points < 0
+
+    self.points = @points
   end
 
   def K
