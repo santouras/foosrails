@@ -50,6 +50,19 @@ describe "Game" do
     end
   end
 
+  context "saving" do
+    let!(:game) { FactoryGirl.build(:game) }
+
+    it "saves points correctly" do
+      game.score1 = 10
+      game.score2 = 8
+
+      game.save!
+
+      game.points.should eq(15.0)
+    end
+  end
+
   describe "calculation parameters" do
     let(:game) { FactoryGirl.build :game }
     context "G:" do
