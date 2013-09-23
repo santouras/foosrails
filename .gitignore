@@ -14,10 +14,5 @@
 /log/*.log
 /tmp
 
-
-# Stupid OS files
-*.AppleDouble
-*.DS_Store
-
 # dotenv files
 /*.env
