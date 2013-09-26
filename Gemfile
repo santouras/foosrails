@@ -21,7 +21,11 @@ group :test do
 end
 
 group :development do
+  # better errors is better
+  gem 'better_errors'
 
+  # this lets us use the REPL part of better errors
+  gem 'binding_of_caller'
 end
 
 group :development, :test do
