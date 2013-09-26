@@ -27,7 +27,7 @@ describe "Game" do
         score1: 10,
         score2: 4,
         weight: 10
-      );
+      )
     end
 
     subject { @game }
