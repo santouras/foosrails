@@ -77,4 +77,26 @@ describe User do
     end
   end
 
+  context "helper methods" do
+
+    context "#adjust_points" do
+      before(:each) do
+        @user.points = 500
+      end
+
+      it "triggers a save" do
+        @user.should_receive(:save!).once
+        @user.adjust_points(40)
+      end
+
+      it "actually adjusts the points" do
+        @user.adjust_points(100)
+        @user.points.should eq(600)
+
+        @user.adjust_points(-200)
+        @user.points.should eq(400)
+      end
+    end
+  end
+
 end
