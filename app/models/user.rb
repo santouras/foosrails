@@ -11,6 +11,11 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6 }
   validates :password_confirmation, presence: true
 
+  def adjust_points(points)
+    self.points += points
+    self.save!
+  end
+
   private
 
   def create_remember_token

@@ -56,6 +56,57 @@ describe "Game" do
 
       game.points.should eq(15.0)
     end
+
+    it "triggers user points update" do
+      game.score1 = 10
+      game.score2 = 8
+
+      game.user1.should_receive(:adjust_points).once
+      game.user2.should_receive(:adjust_points).once
+
+      game.save!
+    end
+  end
+
+  describe "helper methods" do
+    let(:game) { FactoryGirl.build :game }
+
+    before(:each) do
+      game.score1 = 10
+      game.score2 = 8
+
+      game.user1.points = 400
+    end
+
+    context "#score_diff" do
+      it "= 2" do
+        game.score_diff.should eq(2)
+      end
+    end
+
+    context "#user_diff" do
+      it "= -100 for user1" do
+        game.user_diff(game.user1).should eq(-100)
+      end
+
+      it "= 100 for user2" do
+        game.user_diff(game.user2).should eq(100)
+      end
+    end
+
+    context "#points_for" do
+      it "= 19.2 for user1" do
+        game.calculate
+
+        game.points_for(game.user1).should eq(19.2)
+      end
+
+      it "= -19.2 for user2" do
+        game.calculate
+
+        game.points_for(game.user2).should eq(-19.2)
+      end
+    end
   end
 
   describe "calculation parameters" do

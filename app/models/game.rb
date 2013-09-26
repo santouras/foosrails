@@ -8,6 +8,13 @@ class Game < ActiveRecord::Base
 
   before_create :calculate
 
+  after_save do |game|
+    [user1, user2].each do |user|
+      user.adjust_points(points_for(user))
+    end
+  end
+
+
   def calculate
     @points = self.P(self.user1)
 
@@ -59,6 +66,14 @@ class Game < ActiveRecord::Base
 
   def user_diff(user)
     calculate_user_diff(user)
+  end
+
+  def points_for(user)
+    if user == self.user1
+      return self.score1 < self.score2 ? self.points * -1 : self.points
+    else
+      return self.score1 > self.score2 ? self.points * -1 : self.points
+    end
   end
 
   private
