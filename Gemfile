@@ -6,7 +6,7 @@ gem 'jquery-rails'
 gem 'mysql2'
 
 # make passwords saferish
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # set important things in environment variables, not config files
 gem 'dotenv-rails'
