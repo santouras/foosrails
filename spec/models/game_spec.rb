@@ -16,9 +16,14 @@ require 'spec_helper'
 
 describe "Game" do
   context "validation" do
+    let(:user1) { FactoryGirl.create(:user) }
+    let(:user2) { FactoryGirl.create(:user) }
 
     before do
-      @game = FactoryGirl.create( :game,
+
+      @game = Game.new(
+        user1: user1,
+        user2: user2,
         score1: 10,
         score2: 4,
         weight: 10
