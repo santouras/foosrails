@@ -8,9 +8,6 @@ gem 'mysql2'
 # make passwords saferish
 gem 'bcrypt-ruby'
 
-# foriegn key support in dbs
-#gem 'schema_plus'
-
 # set important things in environment variables, not config files
 gem 'dotenv-rails'
 
