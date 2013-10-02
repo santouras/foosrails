@@ -12,12 +12,12 @@ current iteration of the project.
 ## To Do
 - Design
 - User Page
-	- Show games played
-	- Show win/loss %
-	- Show most frequent opponent
-	- Head to head if two users selected
+  - Show games played
+  - Show win/loss %
+  - Show most frequent opponent
+  - Head to head if two users selected
 - Basic game info page
 - Statistics
-	- Points ranking
-	- Side win/loss %
-	- Greatest wins/losses
+  - Points ranking
+  - Side win/loss %
+  - Greatest wins/losses
