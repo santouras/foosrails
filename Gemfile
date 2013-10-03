@@ -14,6 +14,9 @@ gem 'dotenv-rails'
 # sensible templating
 gem 'haml-rails'
 
+# bootstrap for templatng (for the moment)
+gem 'bootstrap-sass'
+
 # gems used just for testing
 group :test do
   gem 'capybara'
