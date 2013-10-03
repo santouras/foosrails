@@ -17,6 +17,9 @@ gem 'haml-rails'
 # bootstrap for templatng (for the moment)
 gem 'bootstrap-sass'
 
+# paginate activerecord queries
+gem 'will_paginate'
+
 # gems used just for testing
 group :test do
   gem 'capybara'
