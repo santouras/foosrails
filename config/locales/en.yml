@@ -20,4 +20,41 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app:
+    name: "Foosball"
+    welome: "Welcome to Foosball!"
+
+  session:
+    new:
+      title: "Sign In"
+      heading: "Sign In"
+      submit: "Sign In"
+      newtext: "New to Foosball?"
+      newlink: "Sign up now!"
+
+  users:
+    index:
+      title: "All Users"
+      heading: "All Users"
+    new:
+      title: "Sign Up"
+      heading: "Sign Up"
+      submit: "Create my account"
+    edit:
+      title: "Edit User"
+      heading: "Update Your Profile"
+      submit: "Save changes"
+
+    gravatar:
+      changelink: "change"
+
+  static:
+    about:
+      title: "About Us"
+      heading: "About Us"
+    contact:
+      title: "Contact Us"
+      heading: "Contact Us"
+    help:
+      title: "Help"
+      heading: "Help"
