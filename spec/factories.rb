@@ -5,6 +5,10 @@ FactoryGirl.define do
     password "foobar"
     password_confirmation "foobar"
     points 500
+
+    factory :admin do
+      admin true
+    end
   end
 
   factory :game do
