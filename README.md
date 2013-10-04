@@ -21,5 +21,6 @@ current iteration of the project.
     - Points ranking
     - Side win/loss %
     - Greatest wins/losses
+- Split out text into language files
 - Refactoring
     - Score calculator needs breaking into it's own module
