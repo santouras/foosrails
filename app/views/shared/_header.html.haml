@@ -1,0 +1,14 @@
+%ul.nav
+  - if !signed_in?
+    %li
+      %a{href: signin_url}= t('header.signin')
+
+    %li
+      %a{href: signup_url}= t('header.signup')
+
+  - else
+    %li
+      %a{href: new_game_url}= t('header.creategame')
+
+    %li
+      %a{href: signout_url}= t('header.signout')

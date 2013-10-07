@@ -24,6 +24,12 @@ en:
     name: "Foosball"
     welome: "Welcome to Foosball!"
 
+  header:
+    signin: "Sign In"
+    signout: "Sign Out"
+    signup: "Sign Up"
+    creategame: "Enter Game"
+
   session:
     new:
       title: "Sign In"
