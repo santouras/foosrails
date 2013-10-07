@@ -11,6 +11,7 @@ current iteration of the project.
 
 ## To Do
 - Design
+- Game Entry
 - User Page
     - Show games played
     - Show win/loss %
